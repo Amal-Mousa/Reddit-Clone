@@ -17,4 +17,4 @@ const options = {
 
 const connection = new Pool(options);
 
-module.exports = connection;
+module.exports = { connection };
