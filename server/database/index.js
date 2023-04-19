@@ -1,3 +1,3 @@
-const connection = require('./config');
+const { signupQuery, getUserByEmail } = require('./query');
 
-module.exports = connection;
+module.exports = { signupQuery, getUserByEmail };
