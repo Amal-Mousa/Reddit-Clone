@@ -15,8 +15,8 @@
 14- jwt.js //* (signTokenPromise, verifyTokenPromise)
 15- signupController //* (signToken)
 16 - getUserByEmailQuery
-17- signupController
-18- 
+17- loginController //*(signinSchema.validateAsync), (getUserByEmail), (bcrypt.compare), (signToken)
+18-
 */
 
 // signupSchema.validateAsync({ username, email, password, confirmPassword }, { abortEarly: false })
