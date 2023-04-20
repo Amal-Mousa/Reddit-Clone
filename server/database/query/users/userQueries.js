@@ -17,8 +17,5 @@ const getUserByEmail = (email) => {
   return connection.query(sql)
 };
 
-const signinQuery = (userData) => {
-  
-}
 
 module.exports = { signupQuery, getUserByEmail };

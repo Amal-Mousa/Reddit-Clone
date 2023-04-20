@@ -3,6 +3,8 @@ const compression = require('compression');
 const { join } = require('path');
 const cookieParser = require('cookie-parser');
 const router = require('./router');
+const { clientError, serverError } = require('./controllers/errors');
+
 require('dotenv').config();
 
 const app = express();
@@ -18,6 +20,8 @@ app.use([
   cookieParser(),
   express.static(join(__dirname, '..', 'public')),
   router,
+  serverError,
+  clientError
 ]);
 
 module.exports = { app };

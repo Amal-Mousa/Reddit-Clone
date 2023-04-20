@@ -14,8 +14,9 @@
 13- signpController //* (signupSchema.validateAsync), (hash password=>bcrypt.hash(password, cost)), (signupQuery(data))
 14- jwt.js //* (signTokenPromise, verifyTokenPromise)
 15- signupController //* (signToken)
-16 - signinQuery
-17- 
+16 - getUserByEmailQuery
+17- signupController
+18- 
 */
 
 // signupSchema.validateAsync({ username, email, password, confirmPassword }, { abortEarly: false })
@@ -78,3 +79,52 @@
 //       .catch((err) => console.log(err))
 //   })
 //   .catch((err) => console.log(err));
+
+// .catch (
+//       (err) => next(err) //* when we write next and pass a parameter to it, it will search for function in the controller that have the four arguments and implement it (err, req, res, next) this mean it will go to the serverError
+//     );
+//* any error from the catch we will do like this => next(err)
+
+
+// const signinController = (req, res, next) => {
+//   const { email, password } = req.body;
+  // console.log(password); //* password without hashing, compare will hash the password with the same salt that the original password use
+//   signinSchema.validateAsync(req.body, { abortEarly: false })
+//     .then((userData) => getUserByEmail(userData.email))
+//     .then(data => console.log(data))
+//     .then((userData) => {
+//       if (userData.rowCount === 0) {
+//         throw new CustomError(400, 'Invalid Email or Password')
+//       }
+      //* return the sepcific data for the user who own the email that you provided
+      // console.log(userData.rows[0]);
+//       req.user = data.rows[0]
+//       return bcrypt.compare(password, userData.rows[0].password)
+//     })
+//     //* return boolean value
+//     .then((isMatched) => {
+//       if (!isMatched) {
+//         throw new CustomError(400, 'Invalid Email or Password')
+//       }
+
+//     })
+//     .then(() => {
+//       const { id, username, email } = req.user
+//       //* return token to store it in the cookie
+//       return signToken({ id, username, email }, { expiresIn: '30d' })
+//     })
+//     .then((token) => {
+//       res
+//         .cookie('token', token, { httpOnly: true, maxAge: ms('1d') })
+//         .json({
+//           error: false,
+//           data: {
+//             message: 'User Logged In successfully',
+//             user: req.user
+//           }
+//         })
+//     })
+
+//     .catch((err) => next(err))
+
+// }
