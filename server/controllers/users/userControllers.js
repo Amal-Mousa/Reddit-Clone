@@ -78,4 +78,23 @@ const signinController = (req, res, next) => {
 
 };
 
+
+const logoutController = (req, res) => {
+  const { token } = req.cookies;
+
+  if (!token) {
+    res.status(401).json({
+      data: {
+        message: 'not authenticated'
+      }
+    })
+  }
+  else {
+    res.clearCookie('token').status(200).json({
+      error: false,
+      message: 'User Logout Successfully'
+    });
+  }
+};
+
 module.exports = { signupController, signinController, logoutController };
