@@ -7,4 +7,9 @@ const signupSchema = Joi.object({
   confirmPassword: Joi.ref('password'),
 });
 
-module.exports = { signupSchema };
+const signinSchema = Joi.object({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(5).pattern(/^[a-zA-Z0-9]{3,30}$/).required()
+});
+
+module.exports = { signupSchema, signinSchema };
