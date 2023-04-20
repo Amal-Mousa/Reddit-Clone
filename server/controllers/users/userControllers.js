@@ -84,6 +84,7 @@ const logoutController = (req, res) => {
 
   if (!token) {
     res.status(401).json({
+      error: true,
       data: {
         message: 'not authenticated'
       }
@@ -92,7 +93,9 @@ const logoutController = (req, res) => {
   else {
     res.clearCookie('token').status(200).json({
       error: false,
-      message: 'User Logout Successfully'
+      data: {
+        message: 'User Logout Successfully'
+      }
     });
   }
 };
