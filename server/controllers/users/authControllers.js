@@ -37,7 +37,6 @@ const signupController = (req, res, next) => {
     .catch((err) => next(err));
 };
 
-// get data and compare password and store token
 const signinController = (req, res, next) => {
   const { email, password } = req.body;
 
@@ -75,13 +74,13 @@ const signinController = (req, res, next) => {
 
 const logoutController = (req, res) => {
   const { token } = req.cookies;
-  
+
   if (!token) {
     res.status(401).json({
       error: true,
       data: {
         message: 'not authenticated'
-      }
+      },
     })
   }
   else {
