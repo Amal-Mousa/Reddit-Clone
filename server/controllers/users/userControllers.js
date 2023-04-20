@@ -21,7 +21,6 @@ const signupController = (req, res, next) => {
         .then((data) => {
           req.user = data;
           return signToken(data, { expiresIn: '30d' })
-            //* store token in cookie and send json that the user created successfully and return the user data 
             .then((token) => {
               res
                 .cookie('token', token, { httpOnly: true, maxAge: ms('1d') })
@@ -33,7 +32,7 @@ const signupController = (req, res, next) => {
                   })
             })
         })
-        .catch((err) => console.log(err))
+        .catch((err) => next(err))
     })
     .catch((err) => next(err));
 };
@@ -41,6 +40,7 @@ const signupController = (req, res, next) => {
 // get data and compare password and store token
 const signinController = (req, res, next) => {
   const { email, password } = req.body;
+
   signinSchema.validateAsync(req.body, { abortEarly: false })
     .then((userData) => getUserByEmail(userData.email))
     .then((userData) => {
@@ -50,16 +50,13 @@ const signinController = (req, res, next) => {
       req.user = userData.rows[0]
       return bcrypt.compare(password, userData.rows[0].password)
     })
-    //* return boolean value
     .then((isMatched) => {
       if (!isMatched) {
         throw new CustomError(400, 'Invalid Email or Password')
       }
-
     })
     .then(() => {
       const { id, username, email } = req.user
-      //* return token to store it in the cookie
       return signToken({ id, username, email }, { expiresIn: '30d' })
     })
     .then((token) => {
@@ -73,15 +70,12 @@ const signinController = (req, res, next) => {
           }
         })
     })
-
     .catch((err) => next(err))
-
 };
-
 
 const logoutController = (req, res) => {
   const { token } = req.cookies;
-
+  
   if (!token) {
     res.status(401).json({
       error: true,
