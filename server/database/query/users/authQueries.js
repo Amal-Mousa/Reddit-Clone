@@ -12,10 +12,9 @@ const signupQuery = (userData) => {
 const getUserByEmail = (email) => {
   const sql = {
     text: 'SELECT * FROM users WHERE email=$1',
-    values: [email]
+    values: [email],
   };
-  return connection.query(sql)
+  return connection.query(sql);
 };
-
 
 module.exports = { signupQuery, getUserByEmail };

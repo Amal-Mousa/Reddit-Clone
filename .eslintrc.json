@@ -23,15 +23,15 @@
         "consistent": true
       }
     ],
-    // "arrow-body-style": [
-    //   "error",
-    //   "as-needed"
-    // ],
-    // "no-unused-variable": [
-    //   true,
-    //   {
-    //     "ignore-pattern": "^_"
-    //   }
-    // ]
+    "arrow-body-style": [
+      "error",
+      "as-needed"
+    ],
+    "no-unused-variable": [
+      true,
+      {
+        "ignore-pattern": "^_"
+      }
+    ]
   }
 }
