@@ -124,7 +124,30 @@
 //           }
 //         })
 //     })
-
 //     .catch((err) => next(err))
-
 // }
+
+
+// const deletePostController = (req, res, next) => {
+  //? route => posts/:id , implement => posts/1
+//   const { id } = req.params
+
+//* return the post details with specific id in params
+//   getPostByIdQuery(id)
+//     .then((post) => console.log(post))
+// };
+
+// const deletePostController = (req, res, next) => {
+//   const { id } = req.params
+
+//   getPostByIdQuery(id)
+//     .then((post) => {
+//       if (post.rowCount === 0) {
+  //?* 401 status for not authorized error.
+//         throw new CustomError(404, 'Post Not Found')
+//       }
+//       return post.rows[0]
+//     })
+//?* return undefiend if we dont return post.rows[0] else return specific post details
+//     .then((data) => console.log(data))
+// };

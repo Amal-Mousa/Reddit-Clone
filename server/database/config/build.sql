@@ -26,19 +26,23 @@ CREATE TABLE
     comments(
         id SERIAL PRIMARY KEY,
         content TEXT NOT NULL,
-        user_id INTEGER REFERENCES users(id),
-        post_id INTEGER REFERENCES posts(id),
+        user_id INTEGER REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+        post_id INTEGER REFERENCES posts(id) ON UPDATE CASCADE ON DELETE CASCADE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
 CREATE TABLE
     votes(
         id SERIAL PRIMARY KEY,
-        type INTEGER NOT NULL CHECK (type = 1 OR type = -1),
-        user_id INTEGER REFERENCES users(id),
-        post_id INTEGER REFERENCES posts(id),
+        type INTEGER NOT NULL CHECK (
+            type = 1
+            OR type = -1
+        ),
+        user_id INTEGER REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE,
+        post_id INTEGER REFERENCES posts(id) ON UPDATE CASCADE ON DELETE CASCADE,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 
--- C:/Users/Amal/Desktop/G13/month2/week8/Reddit-Clone/server/database/config/build.sql
+-- C:/Users/Amal/Desktop/G13/month2/week8/Reddit-Clone/server/database/config/build.sql;
+
 COMMIT;

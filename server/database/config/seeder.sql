@@ -53,6 +53,6 @@ INSERT INTO
     votes (type, user_id, post_id)
 VALUES (1, 1, 1), (-1, 2, 1), (1, 3, 2), (-1, 1, 3), (-1, 2, 3), (1, 3, 3);
 
--- C:/Users/Amal/Desktop/G13/month2/week8/Reddit-Clone/server/database/config/seeder.sql
+-- C:/Users/Amal/Desktop/G13/month2/week8/Reddit-Clone/server/database/config/seeder.sql;
 
 COMMIT;
