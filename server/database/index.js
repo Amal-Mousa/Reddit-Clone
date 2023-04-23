@@ -1,4 +1,4 @@
 const { signupQuery, getUserByEmail } = require('./query');
-const { getPostsQuery } = require('./query');
+const { getPostsQuery, addPostsQuery, deletePostQuery, getPostByIdQuery } = require('./query');
 
-module.exports = { signupQuery, getUserByEmail, getPostsQuery };
+module.exports = { signupQuery, getUserByEmail, getPostsQuery, addPostsQuery, deletePostQuery, getPostByIdQuery };
