@@ -15,9 +15,9 @@ const signToken = (payload) => {
 
 const verifyToken = (token) => {
   return new Promise((resolve, reject) => {
-    verify(token, SECRET_KEY, (err, decode) => {
+    verify(token, SECRET_KEY, (err, decoded) => {
       if (err) reject(err)
-      else resolve(decode)
+      else resolve(decoded)
     });
   });
 };
