@@ -1,5 +1,4 @@
-const { signupController } = require('./signup');
-const { signinController } = require('./signin');
-const { logoutController } = require('./logout');
+const { getUserByIdController } = require('./getUserById');
+const { getUserPostsController } = require('./getUserPosts');
 
-module.exports = { signupController, signinController, logoutController };
+module.exports = { getUserByIdController, getUserPostsController };

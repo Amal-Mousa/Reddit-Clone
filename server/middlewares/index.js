@@ -1,3 +1,4 @@
 const { checkAuth } = require('./checkAuth');
+const { checkUserPresence } = require('./checkUserPresence')
 
-module.exports = { checkAuth };
+module.exports = { checkAuth, checkUserPresence };
