@@ -3,7 +3,7 @@ const { JsonWebTokenError } = require('jsonwebtoken');
 const { CustomError } = require('../../utils');
 
 const serverError = (err, req, res, next) => {
-  console.log(err);
+  // console.log(err);
   const { status, message } = err;
 
   if (err instanceof ValidationError) {
