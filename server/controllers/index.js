@@ -1,6 +1,7 @@
 const { signupController, signinController, logoutController } = require('./auth');
 const { getPostByIdController, getPostsController, addPostController, deletePostController } = require('./posts');
 const { getUserByIdController, getUserPostsController } = require('./users');
+const { voteController } = require('./votes');
 
 module.exports = {
   signupController,
@@ -11,5 +12,6 @@ module.exports = {
   addPostController,
   deletePostController,
   getUserByIdController,
-  getUserPostsController
+  getUserPostsController,
+  voteController
 };
