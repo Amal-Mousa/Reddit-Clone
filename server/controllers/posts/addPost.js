@@ -2,10 +2,10 @@ const { addPostsQuery } = require('../../database');
 const { addPostSchema } = require('../../utils');
 
 const addPostController = (req, res, next) => {
-  const { title, content, image, user_id } = req.body;
-
+  const { id: user_id } = req.user;
+  const { title, content, image } = req.body;
   addPostSchema.validateAsync({ title, content, image, user_id }, { abortEarly: false })
-    .then(({ title, content, image, user_id }) => addPostsQuery({ title, content, image, user_id }))
+    .then((validated) => addPostsQuery(validated))
     .then((newPost) => {
       res.status(201).json({
         error: false,

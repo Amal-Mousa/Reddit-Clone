@@ -6,7 +6,10 @@ const {
   deletePostQuery,
   getPostByIdQuery,
   getUserByIdQuery,
-  getUserPostsQuery } = require('./query');
+  getUserPostsQuery,
+  getVoteQuery,
+  addVoteQuery,
+  deleteVoteQuery } = require('./query');
 
 module.exports = {
   signupQuery,
@@ -16,5 +19,8 @@ module.exports = {
   deletePostQuery,
   getPostByIdQuery,
   getUserByIdQuery,
-  getUserPostsQuery
+  getUserPostsQuery,
+  getVoteQuery,
+  addVoteQuery,
+  deleteVoteQuery
 };
