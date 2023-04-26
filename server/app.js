@@ -18,7 +18,7 @@ app.use([
   express.urlencoded({ extended: false }),
   compression(),
   cookieParser(),
-  express.static(join(__dirname, '..', 'public')),
+  express.static(join(__dirname, "..","client" ,"public")),
   router,
   serverError,
   clientError

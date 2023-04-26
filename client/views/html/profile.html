@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reddit Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <nav>
+        <div class="logo">
+          <img src="/imgs/reddit.png" class="logo" alt="logo">
+        </div>
+        <div class="searchbar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search-input" placeholder="search">
+        </div>
+        <div class="auth auth-home">
+          <button class="login"><a href="/addPost"><i class="fa-solid fa-plus add"></i></a></button>
+          <p><a class="username" href="/profile">username</a></p>
+          <i class="fa-solid fa-right-from-bracket logout"></i>
+        </div>
+      </nav>
+      <main>
+      <div class="user-info">
+        <h1 class="username-profile"></h1>
+        <p class="user-email"></p>
+      </div>
+        <div class="profile">
+        <div class="container">
+          <h2 class="section-title">Recent Activity</h2>
+          <div class="activity">
+            <!-- <div class="post">
+              <div class="post-header">
+                <div class="post-title">
+                  <a href="#">This is a post title</a>
+                </div>
+                <div class="post-author">
+                  <a href="#">u/username</a>
+                </div>
+              </div>
+              <div class="post-content">
+                <p>This is the post content. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus lectus vel enim luctus, vel mattis leo auctor.</p>
+                <img src="https://via.placeholder.com/150" alt="Post image">
+              </div>
+              <div class="post-footer">
+                <div class="post-votes">
+                  <button class="upvote-btn"></button>
+                  <span class="vote-count">10</span>
+                  <button class="downvote-btn"></button>
+                </div>
+              </div>
+            </div> -->
+          <!-- specific user posts will added here -->
+          </div>
+        </div>
+      </div>
+      </main>
+      <script src="/js/dom.js"></script>
+      <script src="/js/profile.js"></script>
+      <script src="/js/logout.js"></script>
+  </body>
+</html>

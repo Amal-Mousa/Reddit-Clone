@@ -1,5 +1,6 @@
 const { ValidationError } = require('joi');
 const { JsonWebTokenError } = require('jsonwebtoken');
+const path = require('path')
 const { CustomError } = require('../../utils');
 
 const serverError = (err, req, res, next) => {
@@ -33,12 +34,7 @@ const serverError = (err, req, res, next) => {
     })
   };
 
-  res.status(500).json({
-    error: true,
-    data: {
-      message: 'Internal Server Error'
-    }
-  });
+  res.sendFile(path.join(__dirname, "..", "..", "..", "client", "views", "html", "500.html"));
 
 }
 

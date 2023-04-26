@@ -28,7 +28,7 @@ VALUES (
     ), (
         'Second post',
         'Phasellus nec tellus gravida, cursus tellus vitae, tempor mpor. Duis at pulvinar nulla, a imperdiet ex.',
-        NULL,
+        '',
         2
     ), (
         'Third post',

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Reddit Clone</title>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      <img src="../imgs/reddit.png" class="logo" alt="logo">
+    </div>
+    <div class="searchbar">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" class="search-input" placeholder="search">
+    </div>
+    <div class="auth auth-home">
+      <button class="login"><a href="/addPost"><i class="fa-solid fa-plus add"></i></a></button>
+      <p><a class="username" href="/profile"></a></p>
+      <i class="fa-solid fa-right-from-bracket logout"></i>
+    </div>
+  </nav>
+  <main class="home-body">
+    
+  <div class="profile">
+  <div class="container">
+    <h2 class="section-title">Recent Activity</h2>
+    <div class="activity">
+          <!-- user post will added here -->
+    </div>
+  </div>
+  </div>
+  </main>
+  <script src="/js/dom.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="/js/logout.js"></script>
+</body>
