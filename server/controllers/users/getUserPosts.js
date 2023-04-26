@@ -1,5 +1,4 @@
 const { getUserPostsQuery } = require('../../database');
-const { CustomError } = require('../../utils');
 
 const getUserPostsController = (req, res, next) => {
   const { id } = req.params;

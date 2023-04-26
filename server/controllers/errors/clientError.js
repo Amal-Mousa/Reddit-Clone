@@ -1,9 +1,7 @@
+const path = require('path');
+
 const clientError = (req, res) => {
-  res.status(404).json({
-    error: true,
-    data: {
-      message: '404 error'
-    }
-  });
+  res.sendFile(path.join(__dirname, "..", "..", "..", "client", "views", "html", "404.html"));
+
 };
 module.exports = { clientError };
