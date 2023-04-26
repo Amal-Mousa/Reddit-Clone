@@ -34,7 +34,7 @@ const serverError = (err, req, res, next) => {
     })
   };
 
-  res.sendFile(path.join(__dirname, "..", "..", "..", "client", "views", "html", "500.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "..", "client", "views", "500.html"));
 
 }
 

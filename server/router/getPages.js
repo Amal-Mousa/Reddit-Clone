@@ -7,23 +7,23 @@ getPagesRouter.get('/', (req, res) => {
 
 
 getPagesRouter.get('/signup', (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "html", "signup.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "signup.html"));
 });
 
 getPagesRouter.get('/signin', (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "html", "login.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "login.html"));
 });
 
 getPagesRouter.get('/profile', (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "html", "profile.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "profile.html"));
 });
 
 getPagesRouter.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "html", "home.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "home.html"));
 });
 
 getPagesRouter.get('/addPost', (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "html", "addPost.html"));
+  res.sendFile(path.join(__dirname, "..", "..", "client", "views", "addPost.html"));
 });
 
 module.exports = getPagesRouter;
